@@ -17,8 +17,11 @@ const Navbar = () => {
     <div className="flex flex-col md:flex-row justify-between items-center px-8 py-2 bg-gray-100 shadow-md fixed top-0 left-0 right-0 z-50">
       {/* Logo and Branding */}
       <div className="flex flex-row items-center gap-2 font-bold">
-        <img src={assets.logo} alt="logo" className="w-22 h-14" />
-        <p className="text-lg font-bold text-gray-700">Shop-it</p>
+        <Link to={"/"}
+        className='flex flex-row items-center'>
+         <img src={assets.logo} alt="logo" className="w-22 h-14" />
+         <p className="text-lg font-bold text-gray-700">Shop-it</p>
+        </Link>
       </div>
 
       {/* Hamburger Icon for Mobile */}
@@ -49,11 +52,25 @@ const Navbar = () => {
         >
           <Link to="/new">new</Link>
         </li>
-        <li
+        {/* <li
           onClick={() => setMenu('students')}
           className={`cursor-pointer ${menu === 'students' ? 'text-green-500 font-bold underline' : ''}`}
         >
           <Link to="/students">students</Link>
+        </li> */}
+        {/* accessories */}
+        <li
+          onClick={() => setMenu('accessories')}
+          className={`cursor-pointer ${menu === 'accessories' ? 'text-green-500 font-bold underline' : ''}`}
+        >
+          <Link to="/accessories">accessories</Link>
+        </li>
+        {/* phones */}
+        <li
+          onClick={() => setMenu('phones')}
+          className={`cursor-pointer ${menu === 'phones' ? 'text-green-500 font-bold underline' : ''}`}
+        >
+          <Link to="/phones">phones</Link>
         </li>
       </ul>
 

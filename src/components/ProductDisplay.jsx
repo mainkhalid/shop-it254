@@ -119,7 +119,7 @@ const ProductDisplay = (props) => {
 
         {/* Features */}
         <p className="text-gray-700">
-          <span className="font-semibold">Features:</span> Latest Microsoft Office pre-installed
+          <span className="font-semibold">Features:</span> {product.features}
         </p>
       </div>
     </div>

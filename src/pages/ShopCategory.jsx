@@ -7,7 +7,7 @@ const ShopCategory = (props) => {
   const { all_products } = useContext(ShopContext);
 
   return (
-    <div className="px-4 py-10">
+    <div className="px-4 py-10 mt-8">
       {/* Banner Section */}
       <div className="w-full mb-8">
         <img

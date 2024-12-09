@@ -35,7 +35,7 @@ const LoginSignup = () => {
   const login = async () => {
     console.log("Login function executed");
     let responseData;
-    await fetch("http://localhost:4000/login", {
+    await fetch(`${import.meta.env.VITE_API_URL}/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -62,7 +62,7 @@ const LoginSignup = () => {
   const signup = async () => {
     console.log("Signup function executed");
     let responseData;
-    await fetch("http://localhost:4000/signup", {
+    await fetch(`${import.meta.env.VITE_API_URL}/signup`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
