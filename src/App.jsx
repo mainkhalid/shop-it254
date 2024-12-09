@@ -9,11 +9,13 @@ import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import Contact from "./pages/Contact"
 import About from "./pages/About"
+import Policy from "./pages/Policy"
 import new_banner from "./assets/new_banner.jpg"
 import ex_uk_banner from "./assets/ex_uk_banner.jpg"
 import students_banner from "./assets/kids_banner.jpg"
 import phone_banner from "./assets/phone_banner.jpg"
 import accessories_banner from "./assets/accessories_banner.jpg"
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -34,8 +36,10 @@ const App = () => {
           <Route path="login" element={<LoginSignup />} />
           <Route path="contact" element={<Contact />} />
           <Route path="about" element={<About />} />
+          <Route path="policy" element={<Policy />} />
           
         </Routes>
+        <ToastContainer />
         <Footer />
       </BrowserRouter>
      

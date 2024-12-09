@@ -16,8 +16,14 @@ const Footer = () => {
             </Link>
         </div>
         <ul className='flex cursor-pointer text-gray-500 gap-4'>
-            <li className=' hover:text-green-500 font-bold'>Company</li>
-            <li className=' hover:text-green-500 font-bold'>Products</li>
+            <li 
+             className=' hover:text-green-500 font-bold'>
+             <Link to={'/'}>Shop</Link>
+            </li>
+            <li 
+             className=' hover:text-green-500 font-bold'>
+             <Link to={'/policy'}>Policy</Link>
+            </li>
             <li 
              className=' hover:text-green-500 font-bold'>
              <Link to={'/about'}>About</Link>
