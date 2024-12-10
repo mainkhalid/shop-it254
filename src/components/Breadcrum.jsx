@@ -11,13 +11,13 @@ const Breadcrumb = (props) => {
         Home
       </Link>
       <img src={arrow} alt="" />
-      <Link to="/shop" className="hover:underline">
+      <Link to="/" className="hover:underline">
         Shop
       </Link>
       <img src={arrow} alt="" />
-      <Link to={`/category/${product.category}`} className="hover:underline">
+      <p  className="hover:underline">
         {product.category}
-      </Link>
+      </p>
       <img src={arrow} alt="" />
       <span>{product.name}</span>
     </div>

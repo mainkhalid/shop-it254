@@ -1,6 +1,6 @@
-// export default ProductDisplay;
 import React, { useState, useContext } from 'react';
 import { ShopContext } from '../ShopContext';
+import whatsapp from '../assets/whatsapp.png';
 
 const ProductDisplay = (props) => {
   const { product } = props;
@@ -115,7 +115,8 @@ const ProductDisplay = (props) => {
             window.open(`https://wa.me/+254740577196?text=I'm%20interested%20in%20your%20product%20${product.name}.%20Can%20you%20provide%20more%20information%20about%20it?`, "_blank");
           }}
         >
-          WhatsApp Inquiry
+          Inquiry
+          <img src={whatsapp} alt="" />
         </button>
        </div>
 
