@@ -20,7 +20,7 @@ const policies = {
   shipping: {
     title: "Shipping Policy",
     content: `
-      Free standard shipping on orders above $50. Expect delivery within 5-7 business days.
+      Free standard shipping on orders above $50. Expect delivery within 2 business days.
       Tracking information will be emailed after your purchase.
     `,
   },
@@ -36,6 +36,12 @@ const policies = {
     content: `
       Our customer support is available via email, live chat, and phone.
       Typical response times are within 24 hours.
+    `,
+  },
+  support: {
+    title: "warrant Policy",
+    content: `
+      1 year for all products.
     `,
   },
 };
