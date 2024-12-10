@@ -38,7 +38,7 @@ const policies = {
       Typical response times are within 24 hours.
     `,
   },
-  support: {
+  warrant: {
     title: "warrant Policy",
     content: `
       1 year for all products.

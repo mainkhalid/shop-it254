@@ -1,12 +1,27 @@
-import React from 'react'
-import arrow from '../assets/arrow_icon.png'
-const Breadcrum = (props) => {
-    const {product}= props;
-  return (
-    <div className='flex items-center gap-2 font-bold text-sm text-gray-500 cursor-pointer mt-[72px] px-2'>
-        Home<img src={arrow} alt="" /> shop <img src={arrow} alt="" /> {product.category} <img src={arrow} alt="" /> {product.name}
-    </div>
-  )
-}
+import React from 'react';
+import { Link } from 'react-router-dom'; 
+import arrow from '../assets/arrow_icon.png';
 
-export default Breadcrum
+const Breadcrumb = (props) => {
+  const { product } = props;
+
+  return (
+    <div className="flex items-center gap-2 font-bold text-sm text-gray-500 cursor-pointer mt-[72px] px-2">
+      <Link to="/" className="hover:underline">
+        Home
+      </Link>
+      <img src={arrow} alt="" />
+      <Link to="/shop" className="hover:underline">
+        Shop
+      </Link>
+      <img src={arrow} alt="" />
+      <Link to={`/category/${product.category}`} className="hover:underline">
+        {product.category}
+      </Link>
+      <img src={arrow} alt="" />
+      <span>{product.name}</span>
+    </div>
+  );
+};
+
+export default Breadcrumb;

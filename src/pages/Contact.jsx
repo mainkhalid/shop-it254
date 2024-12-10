@@ -8,29 +8,33 @@ const ContactForm = () => {
     event.preventDefault();
     setResult("Sending....");
     const formData = new FormData(event.target);
-
-    formData.append("access_key", process.env.REACT_APP_ACCESS_KEY);
-
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData
-    });
-
-    const data = await response.json();
-
-    if (data.success) {
+  
+    // Add the access key from the environment variable
+    formData.append("access_key", import.meta.env.VITE_ACCESS_KEY);
+  
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+  
+      const data = await response.json();
+  
+      if (data.success) {
+        setResult("");
+        toast.success("Message Sent Successfully");
+        event.target.reset();
+      } else {
+        console.error("Error:", data);
+        toast.error(data.message);
+        setResult("");
+      }
+    } catch (error) {
+      console.error("Submission failed:", error);
+      toast.error("Something went wrong. Please try again later.");
       setResult("");
-      toast.success("Message Sent Successfully");
-      event.target.reset();
-    } else {
-      console.log("Error", data);
-      toast.error(data.message);
-      setResult("");
-      a
     }
-  };
-
-
+  };  
 
   return (
     <div className='text-center p-6 py-20 lg:px-32 w-full overflow-hidden'>

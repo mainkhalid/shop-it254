@@ -30,7 +30,7 @@ const NewsLetter = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          access_key: process.env.REACT_APP_ACCESS_KEY, // Accessing from .env
+          access_key: import.meta.env.VITE_ACCESS_KEY, // Correct Vite syntax
           email,
         }),
       });
@@ -41,7 +41,7 @@ const NewsLetter = () => {
         toast.success("Thank you for subscribing!");
         setEmail(""); // Clear input
       } else {
-        alert("Subscription failed. Please try again.");
+        toast.error("Subscription failed. Please try again.");
       }
     } catch (error) {
       console.error("Error subscribing:", error);
@@ -64,15 +64,15 @@ const NewsLetter = () => {
           className="p-2 w-[300px] mr-2 focus:outline-none border border-green-300 rounded"
           type="email"
           placeholder="Your Email"
-          value={email} // Controlled input
+          value={email} 
           onChange={handleChange} // Update state
         />
         <button
           className={`${
             loading ? "bg-gray-300" : "bg-transparent"
           } border border-green-400 text-gray-500 hover:bg-green-100 rounded py-2 px-6 text-lg font-bold transition duration-200 cursor-pointer`}
-          onClick={handleSubmit} 
-          disabled={loading} 
+          onClick={handleSubmit}
+          disabled={loading}
         >
           {loading ? "Subscribing..." : "Subscribe"}
         </button>
