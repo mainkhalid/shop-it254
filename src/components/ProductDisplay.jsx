@@ -97,7 +97,7 @@ const ProductDisplay = (props) => {
           processor and sleek design, this product is perfect for both work and play.
         </p>
 
-       <div className='flex flex-col lg:flex-row gap-4'>
+       <div className='flex flex-col lg:flex-row gap-4 items-center'>
          {/* Add to Cart Button */}
         <button
           className="w-full lg:w-auto bg-green-500 text-white py-3 px-6 rounded-lg hover:bg-green-600"
@@ -110,13 +110,13 @@ const ProductDisplay = (props) => {
         </button>
         {/* whatsapp inquire button */}
         <button
-          className="flex flex-row items-center w-full lg:w-auto bg-green-500 text-white py-3 px-6 rounded-lg hover:bg-green-600"
+          className="flex flex-row gap-2 w-full lg:w-auto bg-green-500 text-white py-3 px-6 rounded-lg hover:bg-green-600"
           onClick={() => {
             window.open(`https://wa.me/+254740577196?text=I'm%20interested%20in%20your%20product%20${product.name}.%20Can%20you%20provide%20more%20information%20about%20it?`, "_blank");
           }}
         >
           Inquiry
-          <img src={whatsapp} alt="" />
+          <img className='w-6 h-6' src={whatsapp} alt="" />
         </button>
        </div>
 
