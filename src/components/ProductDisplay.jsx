@@ -87,8 +87,8 @@ const ProductDisplay = (props) => {
 
         {/* Pricing */}
         <div className="text-lg">
-          <p className="line-through text-gray-500">${product.old_price}</p>
-          <p className="text-2xl font-bold text-red-500">${product.new_price}</p>
+          <p className="line-through text-gray-500">ksh{product.old_price}</p>
+          <p className="text-2xl font-bold text-red-500">ksh{product.new_price}</p>
         </div>
 
         {/* Description */}
