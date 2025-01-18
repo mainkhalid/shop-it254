@@ -22,10 +22,18 @@ const Navbar = () => {
     <div className="flex flex-col md:flex-row justify-between items-center px-6 py-2 bg-gray-100 shadow-md fixed top-0 left-0 right-0 z-50">
       {/* Branding and Hamburger Icon */}
       <div className="flex flex-row justify-between items-center w-full md:w-auto">
-        <Link to={"/"} className='flex flex-row items-center'>
-          <img src={assets.logo} alt="logo" className="w-22 h-14" />
-          <p className="text-lg font-bold text-gray-700">Shop-it</p>
-        </Link>
+      <Link to={"/"} className="flex flex-row items-center">
+       <img 
+         src={assets.logo} 
+          alt="logo" 
+          className="w-16 h-16 rounded-full object-cover" 
+       />
+       <div className="flex flex-col ml-3">
+         <p className="text-lg font-bold text-gray-700">ANNEX</p>
+         <span className="text-sm text-red-600">Computers</span>
+       </div>
+      </Link>
+
 
         {/* Hamburger Icon for Mobile */}
         <button 
