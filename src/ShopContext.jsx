@@ -23,7 +23,7 @@ const ShopContextProvider = (props) => {
   }, []);
 
 
-  // Initialize cartItems from localStorage or default values
+  // cartItems from localStorage 
   const [cartItems, setCartItems] = useState(() => {
     const savedCart = localStorage.getItem("cartItems");
     return savedCart ? JSON.parse(savedCart) : getDefaultCart();
@@ -44,7 +44,7 @@ const ShopContextProvider = (props) => {
   const removeFromCart = (itemId) => {
     setCartItems((prev) => ({
       ...prev,
-      [itemId]: Math.max(prev[itemId] - 1, 0), // Prevent negative values
+      [itemId]: Math.max(prev[itemId] - 1, 0), 
     }));
   };
 

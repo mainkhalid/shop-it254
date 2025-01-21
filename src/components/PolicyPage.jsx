@@ -1,4 +1,3 @@
-// File: src/components/PolicyPage.js
 import React from "react";
 
 const policies = {

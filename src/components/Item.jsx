@@ -9,6 +9,7 @@ const Item = (props) => {
          src={props.image}
          alt={props.name}
          className="w-full h-[200px] object-contain"
+         onError={(e) => (e.target.src = "/default-placeholder.png")} 
          />
         </Link>
       <div className="p-4">
