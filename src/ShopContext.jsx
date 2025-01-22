@@ -15,12 +15,21 @@ const ShopContextProvider = (props) => {
   const [all_products, setAll_Products] = useState([]);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/allproducts`)
-      .then((res) => res.json())
-      .then((data) => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/allproducts`, {
+          cache: "no-store", // Prevent caching
+        });
+        const data = await response.json();
         setAll_Products(data);
-      });
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    };
+  
+    fetchProducts();
   }, []);
+  
 
 
   // cartItems from localStorage 

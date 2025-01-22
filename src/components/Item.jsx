@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import ProductImage from './ProductImage';
 
 const Item = (props) => {
   return (
     <div className="w-full max-w-[280px] mx-auto bg-white shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
         <Link to={`/product/${props.id}`}>
-         <img
+         <ProductImage
          src={props.image}
          alt={props.name}
-         className="w-full h-[200px] object-contain"
-         onError={(e) => (e.target.src = "/default-placeholder.png")} 
+         className="w-full h-[200px] object-contain" 
          />
         </Link>
       <div className="p-4">
